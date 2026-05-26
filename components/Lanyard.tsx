@@ -20,6 +20,14 @@ const lanyard = '/lanyard.png';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
+// Extend ThreeElements so TypeScript knows about meshline custom elements
+declare module '@react-three/fiber' {
+  interface ThreeElements {
+    meshLineGeometry: any;
+    meshLineMaterial: any;
+  }
+}
+
 interface LanyardProps {
   position?: [number, number, number];
   gravity?: [number, number, number];
