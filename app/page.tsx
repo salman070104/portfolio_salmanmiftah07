@@ -357,14 +357,14 @@ export default function Home() {
               rel="noreferrer"
               className="group rounded-2xl bg-neutral-900/40 border border-neutral-800/60 overflow-hidden hover:border-lime-500/40 hover:shadow-xl hover:shadow-lime-500/5 transition-all duration-300"
             >
-              <div className="aspect-video w-full bg-gradient-to-br from-sky-900/30 to-neutral-950 border-b border-neutral-800/60 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(14,165,233,0.08),transparent_70%)]" />
-                <div className="text-center space-y-2 z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <Globe className="w-8 h-8 text-sky-400" />
-                  </div>
-                  <p className="text-xs text-neutral-500 font-mono">starconnecttanjung.com</p>
-                </div>
+              <div className="aspect-video w-full border-b border-neutral-800/60 relative overflow-hidden bg-neutral-950">
+                <img
+                  src="https://image.thum.io/get/width/1200/crop/630/https://starconnecttanjung.com/"
+                  alt="StarConnect Tanjung preview"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-transparent to-transparent pointer-events-none" />
               </div>
               <div className="p-5 space-y-3">
                 <div className="flex flex-wrap gap-2">
@@ -386,14 +386,14 @@ export default function Home() {
               rel="noreferrer"
               className="group rounded-2xl bg-neutral-900/40 border border-neutral-800/60 overflow-hidden hover:border-lime-500/40 hover:shadow-xl hover:shadow-lime-500/5 transition-all duration-300"
             >
-              <div className="aspect-video w-full bg-gradient-to-br from-orange-900/30 to-neutral-950 border-b border-neutral-800/60 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(249,115,22,0.08),transparent_70%)]" />
-                <div className="text-center space-y-2 z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <Layers className="w-8 h-8 text-orange-400" />
-                  </div>
-                  <p className="text-xs text-neutral-500 font-mono">blokmstudiopercetakan.vercel.app</p>
-                </div>
+              <div className="aspect-video w-full border-b border-neutral-800/60 relative overflow-hidden bg-neutral-950">
+                <img
+                  src="https://image.thum.io/get/width/1200/crop/630/https://blokmstudiopercetakan.vercel.app/"
+                  alt="Blok M Studio Percetakan preview"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-transparent to-transparent pointer-events-none" />
               </div>
               <div className="p-5 space-y-3">
                 <div className="flex flex-wrap gap-2">
@@ -415,14 +415,14 @@ export default function Home() {
               rel="noreferrer"
               className="group rounded-2xl bg-neutral-900/40 border border-neutral-800/60 overflow-hidden hover:border-lime-500/40 hover:shadow-xl hover:shadow-lime-500/5 transition-all duration-300"
             >
-              <div className="aspect-video w-full bg-gradient-to-br from-violet-900/30 to-neutral-950 border-b border-neutral-800/60 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.08),transparent_70%)]" />
-                <div className="text-center space-y-2 z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <Sparkles className="w-8 h-8 text-violet-400" />
-                  </div>
-                  <p className="text-xs text-neutral-500 font-mono">blok-m-studio.vercel.app</p>
-                </div>
+              <div className="aspect-video w-full border-b border-neutral-800/60 relative overflow-hidden bg-neutral-950">
+                <img
+                  src="https://image.thum.io/get/width/1200/crop/630/https://blok-m-studio.vercel.app/"
+                  alt="Blok M Studio preview"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-transparent to-transparent pointer-events-none" />
               </div>
               <div className="p-5 space-y-3">
                 <div className="flex flex-wrap gap-2">
@@ -444,14 +444,14 @@ export default function Home() {
               rel="noreferrer"
               className="group rounded-2xl bg-neutral-900/40 border border-neutral-800/60 overflow-hidden hover:border-lime-500/40 hover:shadow-xl hover:shadow-lime-500/5 transition-all duration-300"
             >
-              <div className="aspect-video w-full bg-gradient-to-br from-lime-900/30 to-neutral-950 border-b border-neutral-800/60 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(163,230,53,0.08),transparent_70%)]" />
-                <div className="text-center space-y-2 z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-lime-500/10 border border-lime-500/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <Code2 className="w-8 h-8 text-lime-400" />
-                  </div>
-                  <p className="text-xs text-neutral-500 font-mono">portfolio-two-beta-57.vercel.app</p>
-                </div>
+              <div className="aspect-video w-full border-b border-neutral-800/60 relative overflow-hidden bg-neutral-950">
+                <img
+                  src="https://image.thum.io/get/width/1200/crop/630/https://portfolio-two-beta-57.vercel.app/"
+                  alt="Portfolio Developer preview"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-transparent to-transparent pointer-events-none" />
               </div>
               <div className="p-5 space-y-3">
                 <div className="flex flex-wrap gap-2">
