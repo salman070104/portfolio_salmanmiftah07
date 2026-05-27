@@ -10,7 +10,12 @@ import {
   ExternalLink,
   Send,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Globe,
+  CheckCircle2,
+  Plus,
+  Tag,
+  Zap
 } from "lucide-react";
 
 // Load Lanyard dynamically with SSR disabled since it uses WebGL/Three.js
@@ -326,6 +331,390 @@ export default function Home() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Showcase Section */}
+      <section id="portfolio" className="py-24 border-t border-neutral-900 bg-neutral-950/30">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <div className="text-center max-w-2xl mx-auto space-y-4 mb-16">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lime-500/10 border border-lime-500/20 text-lime-400 text-xs font-semibold tracking-widest uppercase">
+              <Globe className="w-3.5 h-3.5" /> Live Websites
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Website yang Sudah Dibuat</h2>
+            <p className="text-neutral-400 text-sm font-light">
+              Beberapa contoh website yang sudah berhasil dikerjakan dan live di internet.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {/* Website 1 — StarConnect */}
+            <a
+              href="https://starconnecttanjung.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-2xl bg-neutral-900/40 border border-neutral-800/60 overflow-hidden hover:border-lime-500/40 hover:shadow-xl hover:shadow-lime-500/5 transition-all duration-300"
+            >
+              <div className="aspect-video w-full bg-gradient-to-br from-sky-900/30 to-neutral-950 border-b border-neutral-800/60 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(14,165,233,0.08),transparent_70%)]" />
+                <div className="text-center space-y-2 z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <Globe className="w-8 h-8 text-sky-400" />
+                  </div>
+                  <p className="text-xs text-neutral-500 font-mono">starconnecttanjung.com</p>
+                </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-sky-950 border border-sky-900 text-sky-400">Company Profile</span>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400">Custom Domain</span>
+                </div>
+                <h3 className="font-bold text-lg group-hover:text-lime-400 transition-colors">StarConnect Tanjung</h3>
+                <p className="text-neutral-500 text-sm font-light leading-relaxed">Website company profile dengan desain modern, responsif, dan kontak WhatsApp terintegrasi.</p>
+                <div className="inline-flex items-center gap-1.5 text-xs text-lime-400 font-semibold mt-1">
+                  <ExternalLink className="w-3.5 h-3.5" /> Lihat Website
+                </div>
+              </div>
+            </a>
+
+            {/* Website 2 — Blok M Studio Percetakan */}
+            <a
+              href="https://blokmstudiopercetakan.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-2xl bg-neutral-900/40 border border-neutral-800/60 overflow-hidden hover:border-lime-500/40 hover:shadow-xl hover:shadow-lime-500/5 transition-all duration-300"
+            >
+              <div className="aspect-video w-full bg-gradient-to-br from-orange-900/30 to-neutral-950 border-b border-neutral-800/60 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(249,115,22,0.08),transparent_70%)]" />
+                <div className="text-center space-y-2 z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <Layers className="w-8 h-8 text-orange-400" />
+                  </div>
+                  <p className="text-xs text-neutral-500 font-mono">blokmstudiopercetakan.vercel.app</p>
+                </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-orange-950 border border-orange-900 text-orange-400">Percetakan</span>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400">Landing Page</span>
+                </div>
+                <h3 className="font-bold text-lg group-hover:text-lime-400 transition-colors">Blok M Studio Percetakan</h3>
+                <p className="text-neutral-500 text-sm font-light leading-relaxed">Website percetakan profesional dengan galeri produk, animasi modern, dan form pemesanan.</p>
+                <div className="inline-flex items-center gap-1.5 text-xs text-lime-400 font-semibold mt-1">
+                  <ExternalLink className="w-3.5 h-3.5" /> Lihat Website
+                </div>
+              </div>
+            </a>
+
+            {/* Website 3 — Blok M Studio */}
+            <a
+              href="https://blok-m-studio.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-2xl bg-neutral-900/40 border border-neutral-800/60 overflow-hidden hover:border-lime-500/40 hover:shadow-xl hover:shadow-lime-500/5 transition-all duration-300"
+            >
+              <div className="aspect-video w-full bg-gradient-to-br from-violet-900/30 to-neutral-950 border-b border-neutral-800/60 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.08),transparent_70%)]" />
+                <div className="text-center space-y-2 z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <Sparkles className="w-8 h-8 text-violet-400" />
+                  </div>
+                  <p className="text-xs text-neutral-500 font-mono">blok-m-studio.vercel.app</p>
+                </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-violet-950 border border-violet-900 text-violet-400">Studio</span>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400">Premium UI</span>
+                </div>
+                <h3 className="font-bold text-lg group-hover:text-lime-400 transition-colors">Blok M Studio</h3>
+                <p className="text-neutral-500 text-sm font-light leading-relaxed">Website studio kreatif dengan desain premium, dark mode, dan animasi scroll yang memukau.</p>
+                <div className="inline-flex items-center gap-1.5 text-xs text-lime-400 font-semibold mt-1">
+                  <ExternalLink className="w-3.5 h-3.5" /> Lihat Website
+                </div>
+              </div>
+            </a>
+
+            {/* Website 4 — Portfolio */}
+            <a
+              href="https://portfolio-two-beta-57.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="group rounded-2xl bg-neutral-900/40 border border-neutral-800/60 overflow-hidden hover:border-lime-500/40 hover:shadow-xl hover:shadow-lime-500/5 transition-all duration-300"
+            >
+              <div className="aspect-video w-full bg-gradient-to-br from-lime-900/30 to-neutral-950 border-b border-neutral-800/60 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(163,230,53,0.08),transparent_70%)]" />
+                <div className="text-center space-y-2 z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-lime-500/10 border border-lime-500/20 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <Code2 className="w-8 h-8 text-lime-400" />
+                  </div>
+                  <p className="text-xs text-neutral-500 font-mono">portfolio-two-beta-57.vercel.app</p>
+                </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-lime-950 border border-lime-900 text-lime-400">Portfolio</span>
+                  <span className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-neutral-950 border border-neutral-800 text-neutral-400">Next.js</span>
+                </div>
+                <h3 className="font-bold text-lg group-hover:text-lime-400 transition-colors">Portfolio Developer</h3>
+                <p className="text-neutral-500 text-sm font-light leading-relaxed">Website portfolio interaktif dengan Lanyard 3D, animasi physics, dan desain dark mode premium.</p>
+                <div className="inline-flex items-center gap-1.5 text-xs text-lime-400 font-semibold mt-1">
+                  <ExternalLink className="w-3.5 h-3.5" /> Lihat Website
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 border-t border-neutral-900 bg-neutral-950 relative overflow-hidden">
+        {/* Subtle grid background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(163,230,53,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(163,230,53,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+        <div className="container mx-auto px-6 max-w-6xl relative z-10">
+          {/* Header */}
+          <div className="text-center max-w-2xl mx-auto space-y-4 mb-16">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lime-500/10 border border-lime-500/20 text-lime-400 text-xs font-semibold tracking-widest uppercase">
+              <Tag className="w-3.5 h-3.5" /> Harga Jasa
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Daftar Harga Jasa Website</h2>
+            <p className="text-neutral-400 text-sm font-light">
+              Transparent pricing untuk semua jenis kebutuhan website Anda — dari landing page hingga sistem informasi penuh.
+            </p>
+          </div>
+
+          {/* Pricing Tables Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+
+            {/* Package 1 — Website Portfolio */}
+            <div className="rounded-2xl bg-neutral-900/50 border border-neutral-800/80 overflow-hidden">
+              <div className="px-6 py-4 bg-gradient-to-r from-blue-600/20 to-transparent border-b border-neutral-800/80 flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest text-blue-400 font-semibold mb-0.5">Paket 1</div>
+                  <h3 className="font-bold text-lg">Website Portfolio</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs text-neutral-500 mb-0.5">Mulai dari</div>
+                  <div className="text-xl font-black text-blue-400">Rp350.000</div>
+                </div>
+              </div>
+              <div className="divide-y divide-neutral-800/50">
+                {[
+                  { label: "Responsive, modern UI, kontak WhatsApp, deploy Vercel", price: "Rp350.000", isBase: true },
+                  { label: "+ Tambahan Animasi Premium — Smooth animation, transition modern", price: "+Rp250.000" },
+                  { label: "+ Fitur 3D — 3D object / interactive background", price: "+Rp500.000 – Rp1.500.000" },
+                  { label: "+ Custom Domain .com — Domain 1 tahun", price: "+Rp200.000" },
+                  { label: "+ Admin Dashboard — CRUD project & artikel", price: "+Rp1.000.000" },
+                  { label: "+ Blog / Artikel — SEO blog system", price: "+Rp750.000" },
+                ].map((item, i) => (
+                  <div key={i} className={`px-5 py-3 flex items-start justify-between gap-4 ${item.isBase ? "bg-blue-500/5" : "hover:bg-neutral-800/30 transition-colors"}`}>
+                    <div className="flex items-start gap-2 flex-1">
+                      {item.isBase ? <CheckCircle2 className="w-4 h-4 text-blue-400 mt-0.5 shrink-0" /> : <Plus className="w-4 h-4 text-neutral-600 mt-0.5 shrink-0" />}
+                      <span className="text-sm text-neutral-300 font-light">{item.label}</span>
+                    </div>
+                    <span className={`text-sm font-semibold shrink-0 ${item.isBase ? "text-blue-400" : "text-lime-400"}`}>{item.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Package 2 — Landing Page UMKM */}
+            <div className="rounded-2xl bg-neutral-900/50 border border-neutral-800/80 overflow-hidden">
+              <div className="px-6 py-4 bg-gradient-to-r from-emerald-600/20 to-transparent border-b border-neutral-800/80 flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest text-emerald-400 font-semibold mb-0.5">Paket 2</div>
+                  <h3 className="font-bold text-lg">Landing Page UMKM</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs text-neutral-500 mb-0.5">Mulai dari</div>
+                  <div className="text-xl font-black text-emerald-400">Rp500.000</div>
+                </div>
+              </div>
+              <div className="divide-y divide-neutral-800/50">
+                {[
+                  { label: "1 halaman, mobile friendly, WhatsApp", price: "Rp500.000", isBase: true },
+                  { label: "+ Galeri Produk — Slider & gallery", price: "+Rp300.000" },
+                  { label: "+ Animasi Modern — Scroll animation", price: "+Rp250.000" },
+                  { label: "+ Google Maps — Integrasi maps lokasi usaha", price: "+Rp100.000" },
+                  { label: "+ Form Pemesanan — Form order otomatis", price: "+Rp350.000" },
+                  { label: "+ SEO Google — Optimasi pencarian Google", price: "+Rp500.000" },
+                ].map((item, i) => (
+                  <div key={i} className={`px-5 py-3 flex items-start justify-between gap-4 ${item.isBase ? "bg-emerald-500/5" : "hover:bg-neutral-800/30 transition-colors"}`}>
+                    <div className="flex items-start gap-2 flex-1">
+                      {item.isBase ? <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" /> : <Plus className="w-4 h-4 text-neutral-600 mt-0.5 shrink-0" />}
+                      <span className="text-sm text-neutral-300 font-light">{item.label}</span>
+                    </div>
+                    <span className={`text-sm font-semibold shrink-0 ${item.isBase ? "text-emerald-400" : "text-lime-400"}`}>{item.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Package 3 — Company Profile */}
+            <div className="rounded-2xl bg-neutral-900/50 border border-neutral-800/80 overflow-hidden">
+              <div className="px-6 py-4 bg-gradient-to-r from-indigo-600/20 to-transparent border-b border-neutral-800/80 flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest text-indigo-400 font-semibold mb-0.5">Paket 3</div>
+                  <h3 className="font-bold text-lg">Company Profile</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs text-neutral-500 mb-0.5">Mulai dari</div>
+                  <div className="text-xl font-black text-indigo-400">Rp2.000.000</div>
+                </div>
+              </div>
+              <div className="divide-y divide-neutral-800/50">
+                {[
+                  { label: "Multi halaman, profil usaha, galeri", price: "Rp2.000.000", isBase: true },
+                  { label: "+ Admin Dashboard — Edit konten sendiri", price: "+Rp1.500.000" },
+                  { label: "+ Multi Bahasa — Indonesia & English", price: "+Rp750.000" },
+                  { label: "+ Sistem Artikel/Berita — News management", price: "+Rp1.000.000" },
+                  { label: "+ Hosting Premium — Hosting cepat & stabil", price: "+Rp500.000/tahun" },
+                ].map((item, i) => (
+                  <div key={i} className={`px-5 py-3 flex items-start justify-between gap-4 ${item.isBase ? "bg-indigo-500/5" : "hover:bg-neutral-800/30 transition-colors"}`}>
+                    <div className="flex items-start gap-2 flex-1">
+                      {item.isBase ? <CheckCircle2 className="w-4 h-4 text-indigo-400 mt-0.5 shrink-0" /> : <Plus className="w-4 h-4 text-neutral-600 mt-0.5 shrink-0" />}
+                      <span className="text-sm text-neutral-300 font-light">{item.label}</span>
+                    </div>
+                    <span className={`text-sm font-semibold shrink-0 ${item.isBase ? "text-indigo-400" : "text-lime-400"}`}>{item.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Package 4 — Website Laravel System */}
+            <div className="rounded-2xl bg-neutral-900/50 border border-neutral-800/80 overflow-hidden">
+              <div className="px-6 py-4 bg-gradient-to-r from-rose-600/20 to-transparent border-b border-neutral-800/80 flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest text-rose-400 font-semibold mb-0.5">Paket 4</div>
+                  <h3 className="font-bold text-lg">Website Laravel System</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs text-neutral-500 mb-0.5">Mulai dari</div>
+                  <div className="text-xl font-black text-rose-400">Rp3.000.000</div>
+                </div>
+              </div>
+              <div className="divide-y divide-neutral-800/50">
+                {[
+                  { label: "Login, register, database MySQL", price: "Rp3.000.000", isBase: true },
+                  { label: "+ Role User — Admin, staff, user", price: "+Rp750.000" },
+                  { label: "+ Export PDF/Excel — Laporan otomatis", price: "+Rp500.000" },
+                  { label: "+ API Integration — Integrasi pihak ketiga", price: "+Rp1.000.000" },
+                  { label: "+ Realtime Notification — Notifikasi realtime", price: "+Rp750.000" },
+                ].map((item, i) => (
+                  <div key={i} className={`px-5 py-3 flex items-start justify-between gap-4 ${item.isBase ? "bg-rose-500/5" : "hover:bg-neutral-800/30 transition-colors"}`}>
+                    <div className="flex items-start gap-2 flex-1">
+                      {item.isBase ? <CheckCircle2 className="w-4 h-4 text-rose-400 mt-0.5 shrink-0" /> : <Plus className="w-4 h-4 text-neutral-600 mt-0.5 shrink-0" />}
+                      <span className="text-sm text-neutral-300 font-light">{item.label}</span>
+                    </div>
+                    <span className={`text-sm font-semibold shrink-0 ${item.isBase ? "text-rose-400" : "text-lime-400"}`}>{item.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Package 5 — Payment Gateway */}
+            <div className="rounded-2xl bg-neutral-900/50 border border-neutral-800/80 overflow-hidden">
+              <div className="px-6 py-4 bg-gradient-to-r from-amber-600/20 to-transparent border-b border-neutral-800/80 flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest text-amber-400 font-semibold mb-0.5">Paket 5</div>
+                  <h3 className="font-bold text-lg">Sistem Payment Gateway</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs text-neutral-500 mb-0.5">Mulai dari</div>
+                  <div className="text-xl font-black text-amber-400">Rp2.000.000</div>
+                </div>
+              </div>
+              <div className="divide-y divide-neutral-800/50">
+                {[
+                  { label: "Midtrans/Xendit/QRIS", price: "Rp2.000.000", isBase: true },
+                  { label: "+ Virtual Account — BCA, BRI, Mandiri, dll", price: "+Rp500.000" },
+                  { label: "+ E-Wallet — Dana, OVO, GoPay, ShopeePay", price: "+Rp500.000" },
+                  { label: "+ Invoice Otomatis — Generate invoice", price: "+Rp750.000" },
+                  { label: "+ Subscription System — Membership otomatis", price: "+Rp1.500.000" },
+                ].map((item, i) => (
+                  <div key={i} className={`px-5 py-3 flex items-start justify-between gap-4 ${item.isBase ? "bg-amber-500/5" : "hover:bg-neutral-800/30 transition-colors"}`}>
+                    <div className="flex items-start gap-2 flex-1">
+                      {item.isBase ? <CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" /> : <Plus className="w-4 h-4 text-neutral-600 mt-0.5 shrink-0" />}
+                      <span className="text-sm text-neutral-300 font-light">{item.label}</span>
+                    </div>
+                    <span className={`text-sm font-semibold shrink-0 ${item.isBase ? "text-amber-400" : "text-lime-400"}`}>{item.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Package 6 — Sistem Informasi Custom */}
+            <div className="rounded-2xl bg-neutral-900/50 border border-neutral-800/80 overflow-hidden">
+              <div className="px-6 py-4 bg-gradient-to-r from-cyan-600/20 to-transparent border-b border-neutral-800/80 flex items-center justify-between">
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest text-cyan-400 font-semibold mb-0.5">Paket 6</div>
+                  <h3 className="font-bold text-lg">Sistem Informasi Custom</h3>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs text-neutral-500 mb-0.5">Mulai dari</div>
+                  <div className="text-xl font-black text-cyan-400">Rp5.000.000</div>
+                </div>
+              </div>
+              <div className="divide-y divide-neutral-800/50">
+                {[
+                  { label: "Dashboard, CRUD, database", price: "Rp5.000.000", isBase: true },
+                  { label: "+ Absensi GPS & Selfie — Lokasi realtime & kamera", price: "+Rp2.000.000" },
+                  { label: "+ Sistem PPOB — Pembayaran digital", price: "+Rp3.000.000" },
+                  { label: "+ WiFi Billing System — Management pelanggan internet", price: "+Rp5.000.000" },
+                  { label: "+ Mobile App Android — Versi aplikasi Android", price: "+Rp7.000.000" },
+                ].map((item, i) => (
+                  <div key={i} className={`px-5 py-3 flex items-start justify-between gap-4 ${item.isBase ? "bg-cyan-500/5" : "hover:bg-neutral-800/30 transition-colors"}`}>
+                    <div className="flex items-start gap-2 flex-1">
+                      {item.isBase ? <CheckCircle2 className="w-4 h-4 text-cyan-400 mt-0.5 shrink-0" /> : <Plus className="w-4 h-4 text-neutral-600 mt-0.5 shrink-0" />}
+                      <span className="text-sm text-neutral-300 font-light">{item.label}</span>
+                    </div>
+                    <span className={`text-sm font-semibold shrink-0 ${item.isBase ? "text-cyan-400" : "text-lime-400"}`}>{item.price}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+
+          {/* Biaya Tambahan */}
+          <div className="rounded-2xl bg-neutral-900/40 border border-neutral-800/80 overflow-hidden">
+            <div className="px-6 py-4 bg-gradient-to-r from-lime-600/10 to-transparent border-b border-neutral-800/80 flex items-center gap-3">
+              <Zap className="w-5 h-5 text-lime-400" />
+              <h3 className="font-bold text-lg">Biaya Tambahan (Add-on)</h3>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-neutral-800/50">
+              {[
+                { label: "Domain .com", price: "Rp150.000 – Rp250.000/tahun" },
+                { label: "Hosting Premium", price: "Rp300.000 – Rp1.500.000/tahun" },
+                { label: "Maintenance Bulanan", price: "Rp50.000 – Rp300.000" },
+                { label: "Backup Database", price: "Rp100.000/bulan" },
+                { label: "SEO Website", price: "Rp500.000 – Rp2.000.000" },
+                { label: "PWA / Install ke HP", price: "Rp500.000" },
+                { label: "Push Notification", price: "Rp500.000" },
+                { label: "Dark Mode", price: "Rp250.000" },
+                { label: "Fitur Chat WhatsApp Otomatis", price: "Rp200.000" },
+              ].map((item, i) => (
+                <div key={i} className="px-5 py-4 flex flex-col gap-1 hover:bg-neutral-800/30 transition-colors border-b border-neutral-800/40">
+                  <span className="text-xs text-neutral-500 font-semibold uppercase tracking-wider">{item.label}</span>
+                  <span className="text-sm font-bold text-lime-400">{item.price}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-10 text-center">
+            <p className="text-neutral-500 text-sm mb-4">Harga dapat disesuaikan dengan kebutuhan dan kompleksitas proyek Anda.</p>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-lime-500 text-black font-bold hover:bg-lime-400 transition-all duration-300 shadow-lg shadow-lime-500/20"
+            >
+              <Send className="w-4 h-4" />
+              Konsultasi Gratis Sekarang
+            </a>
           </div>
         </div>
       </section>
