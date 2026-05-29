@@ -126,10 +126,21 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ── MOBILE LAYOUT (< lg): stacked — text on top, lanyard below ── */}
+        {/* ── MOBILE LAYOUT (< lg): stacked — lanyard on top, text below ── */}
         <div className="flex lg:hidden flex-col">
-          {/* Text Content Block */}
-          <div className="flex flex-col justify-center min-h-[55vh] px-5 pt-16 pb-6 relative z-10 space-y-4">
+          {/* Lanyard Block — full-width canvas on top, tali menggantung dari atas secara natural */}
+          <div className="relative w-full" style={{ height: '60vh' }}>
+            <div className="absolute inset-0 pointer-events-auto cursor-grab active:cursor-grabbing select-none">
+              <Lanyard position={[0, 0, 20]} fov={20} />
+            </div>
+            {/* Drag hint */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-neutral-900/70 backdrop-blur-md border border-neutral-800/80 px-3 py-1 rounded-full text-[9px] text-neutral-400 font-mono tracking-widest uppercase pointer-events-none animate-pulse whitespace-nowrap z-10">
+              Drag to swing
+            </div>
+          </div>
+
+          {/* Text Content Block — di bawah lanyard */}
+          <div className="flex flex-col px-5 pt-6 pb-10 relative z-10 space-y-4">
             <div className="flex items-center space-x-2 font-semibold tracking-tight text-neutral-300">
               <span className="text-base font-bold text-white">I'm Ready For Job</span>
               <span className="px-2.5 py-0.5 rounded bg-[#bef264] text-black font-black text-[10px] tracking-wider lowercase animate-pulse shadow-md shadow-lime-500/20">
@@ -152,17 +163,6 @@ export default function Home() {
               <a href="#contact" className="px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-300 font-semibold text-sm hover:bg-neutral-800 transition-all duration-300">
                 Get In Touch
               </a>
-            </div>
-          </div>
-
-          {/* Lanyard Block — full-width canvas, anchored at top so rope hangs naturally */}
-          <div className="relative w-full" style={{ height: '55vh' }}>
-            <div className="absolute inset-0 pointer-events-auto cursor-grab active:cursor-grabbing select-none">
-              <Lanyard position={[0, 0, 20]} fov={20} />
-            </div>
-            {/* Drag hint */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-neutral-900/70 backdrop-blur-md border border-neutral-800/80 px-3 py-1 rounded-full text-[9px] text-neutral-400 font-mono tracking-widest uppercase pointer-events-none animate-pulse whitespace-nowrap z-10">
-              Drag to swing
             </div>
           </div>
         </div>
