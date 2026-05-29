@@ -77,65 +77,94 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0c0d0e]">
-        {/* Exact glowing lime grid background matching the screenshot */}
+      <section className="relative overflow-hidden bg-[#0c0d0e]">
+        {/* Glowing lime grid background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(163,230,53,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(163,230,53,0.06)_1px,transparent_1px)] bg-[size:45px_45px] pointer-events-none"></div>
         
         {/* Soft glowing ambient spots */}
         <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-lime-500/[0.03] blur-[150px] pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] rounded-full bg-lime-500/[0.04] blur-[150px] pointer-events-none"></div>
 
-        {/* 3D Lanyard - absolute overlay anchored at top-0 so rope hangs from top edge. Placed on right side on mobile as well (w-[42%]) */}
-        <div className="absolute top-0 right-0 w-[42%] lg:w-[50%] h-screen pointer-events-none z-20 select-none">
-          <div className="w-full h-full pointer-events-auto cursor-grab active:cursor-grabbing">
-            <Lanyard position={[0, 0, 20]} fov={20} />
+        {/* ── DESKTOP LAYOUT (lg+): side-by-side with absolute Lanyard overlay ── */}
+        <div className="hidden lg:flex min-h-screen items-center justify-center relative">
+          {/* 3D Lanyard - absolute overlay on desktop */}
+          <div className="absolute top-0 right-0 w-[50%] h-screen pointer-events-none z-20 select-none">
+            <div className="w-full h-full pointer-events-auto cursor-grab active:cursor-grabbing">
+              <Lanyard position={[0, 0, 20]} fov={20} />
+            </div>
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900/60 backdrop-blur-md border border-neutral-800/80 px-4 py-1.5 rounded-full text-[10px] text-neutral-400 font-mono tracking-widest uppercase pointer-events-none animate-pulse whitespace-nowrap">
+              Drag card to swing it
+            </div>
           </div>
-          {/* Instruction tooltip scaled down on mobile */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900/60 backdrop-blur-md border border-neutral-800/80 px-2 py-1 sm:px-4 sm:py-1.5 rounded-full text-[8px] sm:text-[10px] text-neutral-400 font-mono tracking-wider sm:tracking-widest uppercase pointer-events-none animate-pulse whitespace-nowrap">
-            Drag card
+          <div className="container mx-auto px-6 max-w-6xl grid grid-cols-12 gap-12 items-center relative z-10">
+            <div className="col-span-7 flex flex-col space-y-6 text-left">
+              <div className="flex items-center space-x-3 font-semibold tracking-tight text-neutral-300">
+                <span className="text-2xl font-bold">I'm Ready For Job</span>
+                <span className="px-3.5 py-1 rounded bg-[#bef264] text-black font-black text-xs tracking-wider lowercase animate-pulse shadow-md shadow-lime-500/20">
+                  we~
+                </span>
+              </div>
+              <div className="space-y-1">
+                <h1 className="text-7xl font-extrabold tracking-tight text-white leading-tight">
+                  I'm Salman Miftahur
+                </h1>
+                <TypingText />
+              </div>
+              <p className="text-neutral-400 text-base max-w-xl font-light leading-relaxed">
+                I am from Indonesia, I have more than 5 years of work experience. I am currently working in a company as a full stack product designer/developer, analyzing systems, managing, and leading engineering teams to craft premium user interfaces and high-performance applications.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 pt-4">
+                <a href="#projects" className="px-6 py-3 rounded-xl bg-white text-black font-semibold hover:bg-neutral-200 transition-all duration-300 shadow-lg shadow-white/5">
+                  Explore Projects
+                </a>
+                <a href="#contact" className="px-6 py-3 rounded-xl bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 text-neutral-300 font-semibold transition-all duration-300">
+                  Get In Touch
+                </a>
+              </div>
+            </div>
+            <div className="col-span-5" aria-hidden="true"></div>
           </div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center relative z-10">
-          
-          {/* Hero Content — takes 58% width on mobile to not overlap with the lanyard, on lg takes 7 columns */}
-          <div className="w-[58%] sm:w-[60%] lg:w-full lg:col-span-7 flex flex-col space-y-3 sm:space-y-6 text-left">
-            <div className="flex items-center space-x-1.5 sm:space-x-3 text-xs sm:text-sm font-semibold tracking-tight text-neutral-300">
-              <span className="text-sm sm:text-xl md:text-2xl font-bold">I'm Ready For Job</span>
-              <span className="px-2 py-0.5 sm:px-3.5 sm:py-1 rounded bg-[#bef264] text-black font-black text-[9px] sm:text-xs tracking-wider lowercase animate-pulse shadow-md shadow-lime-500/20">
+        {/* ── MOBILE LAYOUT (< lg): stacked — text on top, lanyard below ── */}
+        <div className="flex lg:hidden flex-col">
+          {/* Text Content Block */}
+          <div className="flex flex-col justify-center min-h-[55vh] px-5 pt-16 pb-6 relative z-10 space-y-4">
+            <div className="flex items-center space-x-2 font-semibold tracking-tight text-neutral-300">
+              <span className="text-base font-bold text-white">I'm Ready For Job</span>
+              <span className="px-2.5 py-0.5 rounded bg-[#bef264] text-black font-black text-[10px] tracking-wider lowercase animate-pulse shadow-md shadow-lime-500/20">
                 we~
               </span>
             </div>
-
             <div className="space-y-1">
-              <h1 className="text-xl sm:text-4xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+              <h1 className="text-3xl font-extrabold tracking-tight text-white leading-tight">
                 I'm Salman Miftahur
               </h1>
               <TypingText />
             </div>
-
-            <p className="text-neutral-400 text-[10px] sm:text-sm md:text-base max-w-xl font-light leading-relaxed">
-              I am from Indonesia, I have more than 5 years of work experience. I am currently working in a company as a full stack product designer/developer, analyzing systems, managing, and leading engineering teams to craft premium user interfaces and high-performance applications.
+            <p className="text-neutral-400 text-xs leading-relaxed max-w-sm">
+              I am from Indonesia, I have more than 5 years of work experience as a full stack product designer/developer, crafting premium user interfaces and high-performance applications.
             </p>
-
-            <div className="flex flex-wrap items-center gap-2 sm:gap-4 pt-2 sm:pt-4">
-              <a 
-                href="#projects" 
-                className="px-3 py-1.5 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl bg-white text-black font-semibold text-xs sm:text-base hover:bg-neutral-200 transition-all duration-300 shadow-lg shadow-white/5"
-              >
+            <div className="flex items-center gap-3 pt-2">
+              <a href="#projects" className="px-4 py-2 rounded-lg bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-all duration-300">
                 Explore Projects
               </a>
-              <a 
-                href="#contact" 
-                className="px-3 py-1.5 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 text-neutral-300 font-semibold text-xs sm:text-base transition-all duration-300"
-              >
+              <a href="#contact" className="px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-300 font-semibold text-sm hover:bg-neutral-800 transition-all duration-300">
                 Get In Touch
               </a>
             </div>
           </div>
 
-          {/* Empty spacer col for desktop — lanyard fills this space absolutely */}
-          <div className="hidden lg:block lg:col-span-5" aria-hidden="true"></div>
+          {/* Lanyard Block — full-width canvas, anchored at top so rope hangs naturally */}
+          <div className="relative w-full" style={{ height: '55vh' }}>
+            <div className="absolute inset-0 pointer-events-auto cursor-grab active:cursor-grabbing select-none">
+              <Lanyard position={[0, 0, 20]} fov={20} />
+            </div>
+            {/* Drag hint */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-neutral-900/70 backdrop-blur-md border border-neutral-800/80 px-3 py-1 rounded-full text-[9px] text-neutral-400 font-mono tracking-widest uppercase pointer-events-none animate-pulse whitespace-nowrap z-10">
+              Drag to swing
+            </div>
+          </div>
         </div>
       </section>
 
