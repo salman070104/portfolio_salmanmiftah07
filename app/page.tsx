@@ -64,9 +64,9 @@ const TypingText = memo(function TypingText() {
   }, [displayedText, isDeleting, loopNum, typingSpeed]);
 
   return (
-    <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#bef264] leading-tight flex items-center min-h-[1.2em]">
+    <h2 className="text-xl sm:text-4xl md:text-7xl font-extrabold tracking-tight text-[#bef264] leading-tight flex items-center min-h-[1.2em]">
       <span>{displayedText}</span>
-      <span className="w-[3px] md:w-[5px] h-[0.9em] bg-[#bef264] ml-1.5 animate-pulse inline-block"></span>
+      <span className="w-[2px] md:w-[5px] h-[0.9em] bg-[#bef264] ml-1 ml-1.5 animate-pulse inline-block"></span>
     </h2>
   );
 });
@@ -85,49 +85,49 @@ export default function Home() {
         <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-lime-500/[0.03] blur-[150px] pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] rounded-full bg-lime-500/[0.04] blur-[150px] pointer-events-none"></div>
 
-        {/* 3D Lanyard - absolute overlay anchored at top-0 so rope hangs from top edge */}
-        <div className="absolute top-0 right-0 w-full lg:w-[50%] h-screen pointer-events-none z-20 select-none">
+        {/* 3D Lanyard - absolute overlay anchored at top-0 so rope hangs from top edge. Placed on right side on mobile as well (w-[42%]) */}
+        <div className="absolute top-0 right-0 w-[42%] lg:w-[50%] h-screen pointer-events-none z-20 select-none">
           <div className="w-full h-full pointer-events-auto cursor-grab active:cursor-grabbing">
             <Lanyard position={[0, 0, 20]} fov={20} />
           </div>
-          {/* Instruction tooltip */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900/60 backdrop-blur-md border border-neutral-800/80 px-4 py-1.5 rounded-full text-[10px] text-neutral-400 font-mono tracking-widest uppercase pointer-events-none animate-pulse whitespace-nowrap">
-            Drag card to swing it
+          {/* Instruction tooltip scaled down on mobile */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900/60 backdrop-blur-md border border-neutral-800/80 px-2 py-1 sm:px-4 sm:py-1.5 rounded-full text-[8px] sm:text-[10px] text-neutral-400 font-mono tracking-wider sm:tracking-widest uppercase pointer-events-none animate-pulse whitespace-nowrap">
+            Drag card
           </div>
         </div>
 
-        <div className="container mx-auto px-6 max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center relative z-10">
           
-          {/* Hero Content — takes 7 columns, right side is occupied by the absolute lanyard overlay */}
-          <div className="lg:col-span-7 flex flex-col space-y-6 text-left">
-            <div className="flex items-center space-x-3 text-sm font-semibold tracking-tight text-neutral-300">
-              <span className="text-xl md:text-2xl font-bold">I'm Ready For Job</span>
-              <span className="px-3.5 py-1 rounded bg-[#bef264] text-black font-black text-xs tracking-wider lowercase animate-pulse shadow-md shadow-lime-500/20">
+          {/* Hero Content — takes 58% width on mobile to not overlap with the lanyard, on lg takes 7 columns */}
+          <div className="w-[58%] sm:w-[60%] lg:w-full lg:col-span-7 flex flex-col space-y-3 sm:space-y-6 text-left">
+            <div className="flex items-center space-x-1.5 sm:space-x-3 text-xs sm:text-sm font-semibold tracking-tight text-neutral-300">
+              <span className="text-sm sm:text-xl md:text-2xl font-bold">I'm Ready For Job</span>
+              <span className="px-2 py-0.5 sm:px-3.5 sm:py-1 rounded bg-[#bef264] text-black font-black text-[9px] sm:text-xs tracking-wider lowercase animate-pulse shadow-md shadow-lime-500/20">
                 we~
               </span>
             </div>
 
             <div className="space-y-1">
-              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+              <h1 className="text-xl sm:text-4xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
                 I'm Salman Miftahur
               </h1>
               <TypingText />
             </div>
 
-            <p className="text-neutral-400 text-sm md:text-base max-w-xl font-light leading-relaxed">
+            <p className="text-neutral-400 text-[10px] sm:text-sm md:text-base max-w-xl font-light leading-relaxed">
               I am from Indonesia, I have more than 5 years of work experience. I am currently working in a company as a full stack product designer/developer, analyzing systems, managing, and leading engineering teams to craft premium user interfaces and high-performance applications.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4 pt-2 sm:pt-4">
               <a 
                 href="#projects" 
-                className="px-6 py-3 rounded-xl bg-white text-black font-semibold hover:bg-neutral-200 transition-all duration-300 shadow-lg shadow-white/5"
+                className="px-3 py-1.5 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl bg-white text-black font-semibold text-xs sm:text-base hover:bg-neutral-200 transition-all duration-300 shadow-lg shadow-white/5"
               >
                 Explore Projects
               </a>
               <a 
                 href="#contact" 
-                className="px-6 py-3 rounded-xl bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 text-neutral-300 font-semibold transition-all duration-300"
+                className="px-3 py-1.5 sm:px-6 sm:py-3 rounded-lg sm:rounded-xl bg-neutral-900 border border-neutral-800 hover:bg-neutral-800 hover:border-neutral-700 text-neutral-300 font-semibold text-xs sm:text-base transition-all duration-300"
               >
                 Get In Touch
               </a>
@@ -144,7 +144,7 @@ export default function Home() {
         <ScrollVelocity 
           texts={["Nusantara_Developer", "Nusantara_Developer"]} 
           velocity={60} 
-          className="text-neutral-800 font-black uppercase tracking-tighter text-4xl md:text-7xl"
+          className="text-white font-black uppercase tracking-tighter text-4xl md:text-7xl"
         />
       </div>
 
@@ -359,7 +359,7 @@ export default function Home() {
             >
               <div className="aspect-video w-full border-b border-neutral-800/60 relative overflow-hidden bg-neutral-950">
                 <img
-                  src="https://image.thum.io/get/width/1200/crop/630/https://starconnecttanjung.com/"
+                  src="/starconnect.png"
                   alt="StarConnect Tanjung preview"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -388,7 +388,7 @@ export default function Home() {
             >
               <div className="aspect-video w-full border-b border-neutral-800/60 relative overflow-hidden bg-neutral-950">
                 <img
-                  src="https://image.thum.io/get/width/1200/crop/630/https://blokmstudiopercetakan.vercel.app/"
+                  src="/blokmstudiopercetakan.jpg"
                   alt="Blok M Studio Percetakan preview"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -417,7 +417,7 @@ export default function Home() {
             >
               <div className="aspect-video w-full border-b border-neutral-800/60 relative overflow-hidden bg-neutral-950">
                 <img
-                  src="https://image.thum.io/get/width/1200/crop/630/https://blok-m-studio.vercel.app/"
+                  src="/blok-m-studio.jpg"
                   alt="Blok M Studio preview"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -446,7 +446,7 @@ export default function Home() {
             >
               <div className="aspect-video w-full border-b border-neutral-800/60 relative overflow-hidden bg-neutral-950">
                 <img
-                  src="https://image.thum.io/get/width/1200/crop/630/https://portfolio-two-beta-57.vercel.app/"
+                  src="/portfolio-screenshot.png"
                   alt="Portfolio Developer preview"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
